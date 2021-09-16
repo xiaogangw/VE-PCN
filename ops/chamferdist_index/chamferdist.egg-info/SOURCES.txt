@@ -1,0 +1,8 @@
+README.md
+setup.py
+chamferdist/chamfer.cu
+chamferdist/chamfer_cuda.cpp
+chamferdist.egg-info/PKG-INFO
+chamferdist.egg-info/SOURCES.txt
+chamferdist.egg-info/dependency_links.txt
+chamferdist.egg-info/top_level.txt
