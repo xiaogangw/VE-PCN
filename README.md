@@ -12,7 +12,7 @@ Build operators under ops by using python setup.py install.
 [Our dataset](https://drive.google.com/file/d/1w0max7KksZQtlYsZN9WQpWIACZrVCR5t/view?usp=sharing)   [PCN's dataset](https://github.com/wentaoyuan/pcn)  [TopNet's dataset](https://github.com/lynetcha/completion3d)
     
 ## Train the model
-To train the models on pcn or topnet dataset: python train_edge.py  
+To train the models on pcn dataset: python train_edge.py  
     --train_pcn;  
     --loss_type: pcn;  
     --train_path: the training data;  
@@ -24,6 +24,21 @@ To train the models on pcn or topnet dataset: python train_edge.py
     --p_norm_weight:0;  
     --dist_regularize_weight:0;  
     --chamfer_weight:1e6;  
+    --lr 0.0007.
+    
+To train the models on topnet dataset: python train_edge.py  
+    --train_pcn;  
+    --loss_type: topnet;  
+    --train_path: the training data;  
+    --eval_path: the validation data;  
+    --n_gt_points: 2048;  
+    --n_out_points: 2048;  
+    --density_weight:1e10;   
+    --dense_cls_weight:100;   
+    --p_norm_weight:300;  
+    --dist_regularize_weight:0.3;  
+    --chamfer_weight:1e4;  
+    --augment;  
     --lr 0.0007.
     
 To train the models on our dataset: python train_edge.py   
@@ -60,5 +75,5 @@ To evaluate models: python test_edge.py
 ## Acknowledgements 
 Our implementations use the code from the following repository:  
 [Chamferdistance](https://github.com/krrish94/chamferdist/tree/488b2d6b9f62014a04109dfe8ee3a68189c44f4d)        
-[PointNet++](https://github.com/erikwijmans/Pointnet2_PyTorch)
+[PointNet++](https://github.com/erikwijmans/Pointnet2_PyTorch)  
 [convolutional_point_cloud_decoder](https://gitlab.vci.rwth-aachen.de:9000/lim/convolutional_point_cloud_decoder)
