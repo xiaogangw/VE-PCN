@@ -64,6 +64,9 @@ To evaluate models: python test_edge.py
     --checkpoint: the pre-trained models;   
     --num_gt_points: the resolution of ground truth point clouds.
     
+## Generate edge points
+edge_detection.py is used to generate edge points given a point cloud data. In order to run it, feed the data path and you will get the edge points saved in a h5py format. 
+    
 ## Citation
 @inproceedings{wang2021voxel,  
 &nbsp;&nbsp;&nbsp;&nbsp;      author    = {Wang, Xiaogang and , Marcelo H. Ang Jr. and Lee, Gim Hee},  
